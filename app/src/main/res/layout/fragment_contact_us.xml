@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="contact_us"
+            type="com.golfcart.ui.contact_us.ContactUsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/appblack"
+            android:textSize="@dimen/_13sdp"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/contact_us"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/appdarkblue"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/mailstr"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

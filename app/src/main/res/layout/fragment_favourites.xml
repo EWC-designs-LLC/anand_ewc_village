@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="favorite"
+            type="com.golfcart.ui.favourite.FavouriteViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvHeading"
+            style="@style/AppTextMedium"
+            android:text="@string/fav_top_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAlignment="textStart"
+            android:padding="@dimen/_10sdp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFav"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvHeading"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginVertical="@dimen/_10sdp" />
+
+        <include
+            android:id="@+id/layoutNoDataFound"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/layout_no_data_found"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

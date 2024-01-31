@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="golf_help"
+            type="com.golfcart.ui.golf_cart_help.GolfCartHelpViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivGolfcart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_cart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvHeading"
+            style="@style/AppTextHeading"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="@string/welcomehelpcart"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivGolfcart" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSubHeading"
+            style="@style/AppTextMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:text="@string/ourmission"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvHeading" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:text="@string/golfcarthelp"
+            android:textColor="@color/appblack"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSubHeading" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCall"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/ic_call"
+            app:layout_constraintEnd_toStartOf="@id/glVerticle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="@dimen/_10sdp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnWebsite"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/ic_website"
+            app:layout_constraintStart_toEndOf="@id/glVerticle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="@dimen/_10sdp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glVerticle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

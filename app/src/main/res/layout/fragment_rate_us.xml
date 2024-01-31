@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="rateus"
+            type="com.golfcart.ui.rate_us.RateUsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/splash_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/appblack"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
+            android:padding="@dimen/_5sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/how_to"
+            app:layout_constraintTop_toBottomOf="@+id/ivLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRateUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_rate_us"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:clipToPadding="false" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/sharebutton"
+            android:text="@string/submit"
+            style="@style/AppButtonRegularIcon"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            app:layout_constraintTop_toBottomOf="@+id/rvRateUs"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

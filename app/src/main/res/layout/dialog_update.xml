@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/appwhite"
+        app:cardCornerRadius="@dimen/_3sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/appwhite"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/version_text"
+                style="@style/AppTextHeading"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/newversion"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_6sdp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/versionupdate"
+                style="@style/AppTextMedium"
+                android:layout_below="@+id/version_text"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/newupdated"
+                android:textColor="@color/appblack"
+                app:layout_constraintTop_toBottomOf="@id/version_text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/vLine"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/applightgrey"
+                app:layout_constraintTop_toBottomOf="@id/versionupdate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/update_btn"
+                style="@style/AppButtonRegularIcon"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="@string/update"
+                android:textAllCaps="false"
+                android:textColor="@color/appblue"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vLine"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

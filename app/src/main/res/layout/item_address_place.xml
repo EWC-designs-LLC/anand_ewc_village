@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_4sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivClock"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_clock"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:text="771 Fire Access Road"
+                style="@style/AppTextMedium"
+                android:drawablePadding="@dimen/_5sdp"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/appgreyy"
+                android:textAlignment="textStart"
+                app:layout_constraintStart_toEndOf="@+id/ivClock"
+                app:layout_constraintTop_toTopOf="@+id/ivClock"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/ivClock" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/applightgrey"
+                android:layout_marginTop="@dimen/_4sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

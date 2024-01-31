@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/_10sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_14sdp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvHeading"
+                style="@style/AppTextMedium"
+                android:layout_width="match_parent"
+                android:gravity="start"
+                android:text="Do you want to Exit ?"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvYes"
+                style="@style/AppTextMedium"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_6sdp"
+                android:text="@string/yes"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvHeading" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNo"
+                style="@style/AppTextMedium"
+                android:text="@string/no"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginEnd="@dimen/_24sdp"
+                android:textStyle="bold"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintBottom_toBottomOf="@id/tvYes"
+                app:layout_constraintEnd_toStartOf="@id/tvYes"
+                app:layout_constraintTop_toTopOf="@id/tvYes" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</layout>

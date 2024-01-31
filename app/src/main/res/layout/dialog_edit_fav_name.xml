@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:background="@color/appwhite"
+        app:cardCornerRadius="@dimen/_3sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/appwhite">
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/bg_fav_editext"
+                android:padding="@dimen/_5sdp"
+                android:singleLine="true"
+                android:hint="Enter Title"
+                android:textColorHint="@color/dim_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/vHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/applightgrey"
+                android:layout_marginTop="@dimen/_30sdp"
+                app:layout_constraintTop_toBottomOf="@id/etName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/cancel"
+                android:textColor="@color/appblue"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vHorizontal"
+                app:layout_constraintEnd_toStartOf="@id/glVerticle"/>
+
+            <View
+                android:layout_width="0.8dp"
+                android:layout_height="0dp"
+                android:background="@color/applightgrey"
+                app:layout_constraintTop_toTopOf="@id/btnCancel"
+                app:layout_constraintStart_toEndOf="@id/glVerticle"
+                app:layout_constraintBottom_toBottomOf="@id/btnCancel"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnOk"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="@string/ok"
+                android:textColor="@color/appblue"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/glVerticle"
+                app:layout_constraintTop_toBottomOf="@+id/vHorizontal"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/glVerticle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.50" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

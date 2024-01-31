@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="search"
+            type="com.golfcart.ui.search.SearchViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rvToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edittext_white_round"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    style="@style/AppEditText"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="-12dp"
+                    android:layout_toStartOf="@id/ivSearch"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="@string/search"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColorHint="@color/light_grey"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/AppTextMedium"
+                    android:text="Search"
+                    android:padding="@dimen/_7sdp"
+                    android:textColor="@color/light_grey"
+                    android:layout_centerVertical="true"
+                    android:textAlignment="textStart" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_6sdp"
+                    android:src="@drawable/ic_search"
+                    android:tint="@color/black" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTabs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_7sdp"
+            android:background="@color/appwhite"
+            app:cardCornerRadius="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvToolbar">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/bg_search_tabs"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnAddress"
+                    style="@style/AppTextMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_search_blue"
+                    android:tag="1"
+                    android:text="@string/address"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/white"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.02"
+                    android:background="@drawable/dividerline" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPlace"
+                    style="@style/AppTextMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:tag="0"
+                    android:text="@string/place"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.02"
+                    android:background="@drawable/dividerline" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnCategory"
+                    style="@style/AppTextMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:tag="0"
+                    android:text="@string/category"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvRecentHeading"
+            style="@style/AppTextSemBoldMed"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:text="@string/recentserach"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cvTabs"
+            android:layout_marginStart="@dimen/_10sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSearch"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecentHeading"
+            mapbox:listitem="@layout/item_restaurant"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

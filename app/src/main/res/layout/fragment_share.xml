@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="share"
+            type="com.golfcart.ui.share.ShareViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:src="@drawable/ic_shareapp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            style="@style/AppTextHeading"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/sharethisapptext"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/ivLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSubtitle"
+            style="@style/AppTextMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:gravity="center_horizontal"
+            android:text="@string/belowisthesocialtext"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:orientation="horizontal"
+            android:weightSum="5.1"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivInsta"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/insta" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFacebook"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/fb" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEmail"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/email" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTwitter"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/twitter" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMsg"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_weight="1"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/message" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

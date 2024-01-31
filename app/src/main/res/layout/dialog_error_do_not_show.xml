@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_16sdp">
+
+            <ImageView
+                android:id="@+id/ivCancel"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/ic_cancelled" />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_1sdp"
+                android:text="@string/routing_may_recommend_low_tunnels_check_height_before_entering_always_follow_posted_traffic_signage"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:id="@+id/layoutAgain"
+                app:layout_constraintStart_toStartOf="@+id/tvMessage"
+                app:layout_constraintTop_toBottomOf="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbAgain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/red"
+                    android:text="Don't show me this again"
+                    android:textColor="@color/red" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnOk"
+                app:cornerRadius="@dimen/_4sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutAgain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="OK"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
+

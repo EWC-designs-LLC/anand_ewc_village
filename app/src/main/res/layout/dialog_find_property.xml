@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:background="@color/appwhite"
+            android:padding="@dimen/_3sdp"
+            app:cardCornerRadius="@dimen/_7sdp"
+            app:cardElevation="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/appwhite">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/btnDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/see_detail"
+                    android:textColor="@color/appblue"
+                    android:textSize="@dimen/_15sdp" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@+id/btnDetail"
+                    android:background="@color/applightgrey" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/btnDirection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/getdirection"
+                    android:textColor="@color/appblue"
+                    android:textSize="@dimen/_15sdp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_above="@+id/llbottom"
+                    android:background="@color/applightgrey" />
+
+                <LinearLayout
+                    android:id="@+id/llbottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnCancel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="@string/cancel"
+                        android:textAllCaps="false"
+                        android:textColor="@color/pink"
+                        android:textSize="@dimen/_14sdp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

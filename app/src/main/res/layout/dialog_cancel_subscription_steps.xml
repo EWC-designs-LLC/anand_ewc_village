@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tvHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="Step-by-Step Subscription \nCancellation"
+            android:textColor="@color/applightbrown"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold" />
+
+        <!--   <androidx.constraintlayout.widget.Guideline
+               android:id="@+id/guidelineV"
+               android:layout_width="wrap_content"
+               android:layout_height="0dp"
+               android:orientation="vertical"
+               app:layout_constraintGuide_percent="0.5" />-->
+
+        <LinearLayout
+            android:id="@+id/layoutButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@drawable/button_bg"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/appwhite"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@drawable/bg_blue_button"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textColor="@color/appwhite"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tvHeading"
+                android:layout_above="@id/layoutButtons">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Tap the &quot;Google Play Store&quot; app icon on your Android device's home screen or in your app drawer."
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_12sdp"
+                        android:src="@drawable/ic_down_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Tap the three horizontal lines (hamburger menu) in the top-left corner of the Play Store to open the menu."
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_12sdp"
+                        android:src="@drawable/ic_down_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Select &quot;Subscriptions&quot; from the menu. This will take you to a list of all your active subscriptions."
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_12sdp"
+                        android:src="@drawable/ic_down_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Here, you will see a list of all your active subscriptions. Tap on the subscription you want to cancel."
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_12sdp"
+                        android:src="@drawable/ic_down_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="On the subscription details page, you will see information about the subscription, including its cost and renewal date and Look for the &quot;Cancel subscription&quot; option. Tap on it."
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_12sdp"
+                        android:src="@drawable/ic_down_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="A confirmation message will appear, asking if you want to cancel the subscription. Review the details to make sure you're cancelling the correct subscription."
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_12sdp"
+                        android:src="@drawable/ic_down_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Confirm the cancellation by tapping &quot;Cancel subscription&quot; or a similar button."
+                        android:textColor="@color/black" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_12sdp"
+                        android:src="@drawable/ic_down_arrow" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="You should receive a confirmation message that your subscription has been cancelled. Be sure to keep this confirmation for your records."
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="version"
+            type="com.golfcart.ui.version.AppVersionViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_13sdp"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/applogo_image"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/splash_logo" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvAppVersion"
+                    style="@style/AppTextHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/applogo_image"
+                    android:gravity="center_horizontal"
+                    android:text="@string/version"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/app_blue"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

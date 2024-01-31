@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="weather"
+            type="com.golfcart.ui.weather.WeatherViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_weather">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDailyHeading"
+            android:layout_width="0dp"
+            style="@style/AppTextHeading"
+            android:textSize="@dimen/_14sdp"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="@string/dailyforecast"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTodayTemperature"
+            style="@style/AppTextSemBoldMed"
+            android:text="----"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDailyHeading"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvCityName"
+            style="@style/AppTextSemBoldMed"
+            android:text="----------"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp"
+            android:layout_marginVertical="@dimen/_2sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTodayTemperature"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvWeatherType"
+            style="@style/AppTextSemBoldMed"
+            android:text="----------"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:layout_marginVertical="@dimen/_3sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCityName"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDaily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWeatherType"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvWeeklyHeading"
+            android:layout_width="0dp"
+            style="@style/AppTextHeading"
+            android:textSize="@dimen/_14sdp"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:paddingVertical="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:text="@string/weekly"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvDaily"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWeekly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvWeeklyHeading"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

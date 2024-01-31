@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_home"
+        android:title="@string/menu_home"
+        android:icon="@drawable/ic_home"
+        />
+
+    <item
+        android:id="@+id/menu_speedometer"
+        android:title="@string/menu_mph"
+        android:icon="@drawable/ic_mph"
+        />
+
+    <item
+        android:id="@+id/menu_weather"
+        android:title="@string/menu_weather"
+        android:icon="@drawable/ic_weathericon"
+        />
+
+    <item
+        android:id="@+id/menu_fav"
+        android:title="@string/menu_favorite"
+        android:icon="@drawable/ic_favourite"
+        />
+
+    <item
+        android:id="@+id/menu_setting"
+        android:title="@string/search"
+        android:icon="@drawable/ic_search"
+        android:iconTint="@color/appwhite"
+        />
+</menu>

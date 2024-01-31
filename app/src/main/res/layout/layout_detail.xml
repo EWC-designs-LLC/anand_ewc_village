@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/rlRoot"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/sharebutton"
+        android:paddingVertical="@dimen/_4sdp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:src="@drawable/ic_simple_call"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTitle"
+            style="@style/AppTextHeading"
+            android:text="Call"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/white"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginHorizontal="@dimen/_6sdp"/>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="point"
+            type="com.golfcart.ui.point_to_point.PointViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/layoutTabs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:visibility="visible"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/colorPrimary"
+            android:elevation="@dimen/_10sdp">
+
+            <LinearLayout
+                android:id="@+id/locationicon"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:src="@drawable/myloc" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:padding="@dimen/_1sdp"
+                    android:src="@drawable/dot" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:padding="@dimen/_1sdp"
+                    android:src="@drawable/dot" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:tint="@color/white"
+                    android:src="@drawable/ic_location" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_toRightOf="@+id/locationicon">
+
+
+                <RelativeLayout
+                    android:id="@+id/searchRlsource"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/bg_edittext_white_round">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvSource"
+                        style="@style/AppTextMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/search"
+                        android:paddingRight="@dimen/_5sdp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/searchRldes"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_below="@+id/searchRlsource"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/bg_edittext_white_round">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvDestination"
+                        style="@style/AppTextMedium"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:hint="@string/search"
+                        android:paddingRight="@dimen/_5sdp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <com.mapbox.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutTabs"
+            app:mapbox_attributionEnabled="false"
+            app:layout_constraintBottom_toTopOf="@+id/btnStart"
+            app:mapbox_logoEnabled="false"
+            android:layout_marginBottom="@dimen/_10sdp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPreview"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:padding="@dimen/_3sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnStart"
+            app:layout_constraintBottom_toBottomOf="@+id/btnStart"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvTotalTime"
+            style="@style/AppTextMedium"
+            android:layout_width="0dp"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:textSize="@dimen/_14sdp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="@id/ivPreview"
+            app:layout_constraintStart_toEndOf="@id/ivPreview"
+            app:layout_constraintTop_toTopOf="@id/ivPreview"
+            app:layout_constraintEnd_toStartOf="@+id/btnStart"
+            android:layout_marginEnd="@dimen/_14sdp"/>
+
+        <LinearLayout
+            android:id="@+id/btnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/_14sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:background="@color/appblue"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_nav_cursor" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/directiontext"
+                style="@style/AppTextHeading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Start"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="@dimen/_12sdp"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

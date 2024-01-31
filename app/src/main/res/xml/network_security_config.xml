@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">thevillagesgpsapp.com</domain>
+        <domain includeSubdomains="true">api.openweathermap.org</domain>
+        <domain includeSubdomains="true">www.talkofthevillages.com</domain>
+        <domain includeSubdomains="true">openweathermap.org</domain>
+        <domain includeSubdomains="true">api.yelp.com</domain>
+        <domain includeSubdomains="true">www.24hrcartclub.com</domain>
+        <domain includeSubdomains="true">api.stadiamaps.com</domain>
+    </domain-config>
+</network-security-config>
